@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+}
+.container {
+    background-color: rgba(100, 100, 100, .5);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
+
+.content {
+    width: 500px;
+    height: 200px;
+    background-color: white;
+}
+
+input {
+    margin: 1px;
+    width: 50px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 52px);
+    grid-template-rows: repeat(10, 52px);
+
+}
+
+.square {
+    border: 1px solid black;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+.y {
+    position: fixed;
+    left: 53vw;
+}
+
+#error {
+    color: red;
+}
+
+/* hit or miss, they thought theyd never miss ya */
+.square:not(.miss):not(.hit):hover{
+    cursor: crosshair;
+}
+
+.square.miss,
+.square.hit {
+    cursor: not-allowed;
+}
+
+.square.miss::before,
+.square.miss::after {
+    content: "";
+    margin: 15px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+}
+
+.square.hit::before,
+.square.hit::after {
+    content: "";
+    margin: 15px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+}
