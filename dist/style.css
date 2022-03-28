@@ -1,7 +1,25 @@
 * {
     margin: 0;
 }
+
+#header {
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    border: 1px solid black;
+    width: auto;
+    padding: 5px;
+    text-align: center;
+}
+/* Modal */
 .container {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: rgba(100, 100, 100, .5);
     text-align: center;
     display: grid;
@@ -17,10 +35,26 @@
     height: 200px;
     background-color: white;
 }
+/* End Modal*/
+
+#boardArea {
+    width: 100vw;
+    border: 1px solid black;
+    height: auto;
+    display: flex;
+}
+
+.board-container {
+    width: 50vw;
+    border: 1px solid black;
+}
 
 input {
     margin: 1px;
     width: 50px;
+}
+#right > #board {
+    float: right;
 }
 
 #board {
@@ -37,7 +71,7 @@ input {
     height: 50px;
 }
 
-.active {
+#left > div > .active {
     background-color: lightgray;
 }
 
@@ -82,4 +116,13 @@ input {
     border-radius: 50px;
     width: 15px;
     height: 15px;
+}
+
+#cover {
+    position: absolute;
+    left: 0vw;
+    width: 50vw;
+    height: 75vh;
+    background-color: rgba(180, 180, 150, .0);
+    z-index: 1;
 }

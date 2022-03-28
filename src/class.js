@@ -1,8 +1,9 @@
 export default class Ship {
-    constructor(name, marks) {
+    constructor(name, marks, owner) {
         this.name = name
         this.marks = marks
         this.length = marks
+        this.owner = owner
     }
 
     hit() {
